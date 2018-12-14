@@ -1,0 +1,37 @@
+          
+ <!--   <form id="login-form"  action="{{'searchtkb'}}" method="get">
+
+     <label for=""><b>Khóa h?c</b></label><br>
+     
+    <select class="form-control" required="" id="course" name="khoa">
+      @foreach($khoahoc as $kh)
+                               
+                                <option value="{{$kh->MaKhoa}}">{{$kh->TenKhoaHoc}}</option>
+                              
+                               
+                               @endforeach
+                              </select>
+
+                               <label for=""><b>L?p</b></label><br>
+    <select class="form-control" required="" id="course" name="lop">
+      @foreach($lophoc as $lh)
+                      
+                          
+                              
+                                <option value="{{$lh->MaLop}}">{{$lh->TenLop}}</option>
+                    @endforeach           
+                              </select>
+                               <label for=""><b>Bu?i</b></label><br>
+    <select class="form-control" required="" id="course" name="buoi">
+                            
+                                <option value="sang">Sáng</option>
+                              <option value="chieu">Chi?u</option>
+                                <option value="toi">T?i</option>
+                               
+                              </select>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Li?t kê</button>              
+            </div>
+
+
+</form> -->
