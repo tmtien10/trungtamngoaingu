@@ -15,7 +15,7 @@ class CreateTkbTable extends Migration
     {
         Schema::create('tkb', function (Blueprint $table) {
             $table->increments('id_TKB');
-            $table->string('MaNhom',10);
+            $table->integer('MaNhom')->unsigned();
             $table->timestamps();
              $table->foreign('MaNhom')->references('MaNhom')->on('nhom')->onUpdate('cascade')->onDelete('cascade');
         });
