@@ -16,7 +16,7 @@ class CreateHoaDonDKHocTable extends Migration
         Schema::create('hoadondkhoc', function (Blueprint $table) {
             $table->increments('id_HoaDonDkHoc');
              $table->integer('id_PhieuDKHoc')->unsigned();
-              $table->interger('MaNV')->unsigned();
+              $table->integer('MaNV')->unsigned();
             $table->integer('MaNhom')->unsigned();
             $table->date('NgayLapHoc');
             $table->foreign('MaNV')->references('MaNV')->on('cbtt')->onUpdate('cascade')->onDelete('cascade');
