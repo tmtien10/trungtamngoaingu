@@ -5,8 +5,9 @@ use App\LopHoc;
 use App\LopKhoa;
 use DB;
 use Session;
-
 use Illuminate\Support\ServiceProvider;
+use URL;
+
 
 class AppServiceProvider extends ServiceProvider
 {

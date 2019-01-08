@@ -157,10 +157,10 @@ class RegisterController extends Controller
                 'confirmation_code' => null
             ]);
             return "<script>alert('Xác nhận thành công!Vui lòng đăng nhập lại');
-                window.location.href='http://localhost/trungtamngoaingu/public/';</script>";
+                window.location.href='https://qlttnn.herokuapp.com';</script>";
         } else {
             return "<script>alert('Mã xác nhận không chính xác');
-                window.location.href='http://localhost/trungtamngoaingu/public/';</script>";
+                window.location.href='https://qlttnn.herokuapp.com';</script>";
         }
 
         
