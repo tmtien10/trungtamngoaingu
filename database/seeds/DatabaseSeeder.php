@@ -15,10 +15,11 @@ class DatabaseSeeder extends Seeder
         $this->call(ThoiGian::class);
         $this->call(ChungChi::class);
         $this->call(khuvuc::class);
-        $this->call(TietHoc::class);
         $this->call(khoa::class);
         $this->call(banner::class);
         $this->call(taikhoan::class);
+        $this->call(TietHoc::class);
+
 
     }
 }
