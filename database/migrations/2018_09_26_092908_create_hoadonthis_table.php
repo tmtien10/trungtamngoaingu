@@ -20,8 +20,8 @@ class CreateHoadonthisTable extends Migration
             $table->integer('phongthi');
             
 
-             $table->foreign('idphieudk')->references('idphieudk')->on('phieudkthis');;
-             $table->foreign('MaNV')->references('MaNV')->on('cbtt');;
+             $table->foreign('idphieudk')->references('idphieudk')->on('phieudkthis')->onUpdate('cascade')->onDelete('cascade');
+             $table->foreign('MaNV')->references('MaNV')->on('cbtt')->onUpdate('cascade')->onDelete('cascade');
             
             $table->timestamps();
         });

@@ -15,12 +15,15 @@ class CreateHocvienTable extends Migration
     {
         Schema::create('hocvien', function (Blueprint $table) {
             $table->string('MaHocVien',10)->primary();
-             $table->string('HoTenHocVien');
-              $table->string('GioiTinh'); //da sua kieu dl thanh varchar
-               $table->date('NgaySinh');
-                 $table->string('DiaChi');
-                   $table->string('Email');
-                     $table->string('SDT');
+            $table->string('HoTenHocVien');
+            $table->string('GioiTinh'); //da sua kieu dl thanh varchar
+            $table->date('NgaySinh');
+            $table->string('DiaChi');
+            $table->string('Email');
+            $table->string('SDT');
+            $table->string('CMND');
+            $table->date('NgayCap');
+            $table->string('NgheNghiep');
             $table->timestamps();
         });
     }

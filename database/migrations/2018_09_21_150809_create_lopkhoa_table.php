@@ -17,17 +17,15 @@ class CreateLopKhoaTable extends Migration
            $table->increments('id');
             $table->string('MaLop',10);
             $table->string('MaKhoa',10);
-            
-              $table->float('lopkhoa');
             $table->date('NgayKhaiGiang');
             $table->date('NgayKetThuc');
              $table->string('TieuDe');
             $table->string('BuoiHoc');
-            $table->boolean('NgayChan');
-             $table->string('ThongTinLop');
+            $table->text('NgayChan');
+            $table->float('HocPhi');
             $table->timestamps();
-              $table->foreign('MaLop')->references('MaLop')->on('lophoc');
-              $table->foreign('MaKhoa')->references('MaKhoa')->on('khoahoc');
+              $table->foreign('MaLop')->references('MaLop')->on('lophoc')->onUpdate('cascade')->onDelete('cascade');
+              $table->foreign('MaKhoa')->references('MaKhoa')->on('khoahoc')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

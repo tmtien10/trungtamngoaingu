@@ -17,8 +17,8 @@ class CreateTkhocgiangvienTable extends Migration
             $table->string('username');
               $table->string('MaGV');
              $table->primary(['MaGV','username']);
-            $table->foreign('MaGV')->references('MaGV')->on('giangvien');;
-             $table->foreign('username')->references('username')->on('taikhoan');;
+            $table->foreign('MaGV')->references('MaGV')->on('giangvien')->onUpdate('cascade')->onDelete('cascade');
+             $table->foreign('username')->references('username')->on('taikhoan')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

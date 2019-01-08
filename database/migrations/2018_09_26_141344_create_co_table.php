@@ -17,8 +17,8 @@ class CreateCoTable extends Migration
             $table->integer('MaKM')->unsigned();
            $table->string('MaLop',10);
                $table->primary(['MaKM','MaLop']);
-                $table->foreign('MaKM')->references('MaKM')->on('khuyenmai');
-             $table->foreign('MaLop')->references('MaLop')->on('lophoc');
+                $table->foreign('MaKM')->references('MaKM')->on('khuyenmai')->onUpdate('cascade')->onDelete('cascade');
+             $table->foreign('MaLop')->references('MaLop')->on('lophoc')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

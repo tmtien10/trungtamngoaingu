@@ -20,16 +20,16 @@ class CreateChitietphancongTable extends Migration
             $table->string('MaNhom',10);
              $table->integer('id_ThoiGian')->unsigned();
              $table->integer('id_TKB')->unsigned();
-              $table->integer('id_TietHoc');
+              $table->integer('id_TietHoc')->unsigned();
             
            
 
             $table->timestamps();
-             $table->foreign('MaGV')->references('MaGV')->on('giangvien');
-              $table->foreign('MaMonHoc')->references('MaMonHoc')->on('monhoc');
-               $table->foreign('MaNhom')->references('MaNhom')->on('nhom');
-            $table->foreign('id_ThoiGian')->references('id_ThoiGian')->on('thoigian');
-              $table->foreign('id_TKB')->references('id_TKB')->on('tkb');
+             $table->foreign('MaGV')->references('MaGV')->on('giangvien')->onUpdate('cascade')->onDelete('cascade');;
+              $table->foreign('MaMonHoc')->references('MaMonHoc')->on('monhoc')->onUpdate('cascade')->onDelete('cascade');;
+               $table->foreign('MaNhom')->references('MaNhom')->on('nhom')->onUpdate('cascade')->onDelete('cascade');;
+            $table->foreign('id_ThoiGian')->references('id_ThoiGian')->on('thoigian')->onUpdate('cascade')->onDelete('cascade');;
+              $table->foreign('id_TKB')->references('id_TKB')->on('tkb')->onUpdate('cascade')->onDelete('cascade');;
             
                
               

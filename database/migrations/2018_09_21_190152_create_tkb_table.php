@@ -17,7 +17,7 @@ class CreateTkbTable extends Migration
             $table->increments('id_TKB');
             $table->string('MaNhom',10);
             $table->timestamps();
-             $table->foreign('MaNhom')->references('MaNhom')->on('nhom');
+             $table->foreign('MaNhom')->references('MaNhom')->on('nhom')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

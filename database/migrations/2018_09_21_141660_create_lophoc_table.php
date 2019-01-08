@@ -15,14 +15,14 @@ class CreateLopHocTable extends Migration
     {
         Schema::create('lophoc', function (Blueprint $table) {
             $table->string('MaLop',10)->primary();
-             $table->string('TenLop');
+            $table->string('TenLop');
             $table->integer('id_TietHoc')->unsigned();
-               $table->string('SoTuanHoc');
-               $table->text('GioiThieu');
+            $table->string('SoTuanHoc');
+            $table->text('GioiThieu');
             $table->text('Hinh');
-           
+            $table->foreign('id_TietHoc')->references('id_TietHoc')->on('tiethoc')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
-             $table->foreign('id_TietHoc')->references('id_TietHoc')->on('tiethoc');
+
 
 
         });

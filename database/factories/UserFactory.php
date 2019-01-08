@@ -4,6 +4,7 @@ use Faker\Generator as Faker;
 use App\hocvien;
 use App\GiangVien;
 use App\DayMonHoc;
+use App\kythi'
 
 /*
 |--------------------------------------------------------------------------
@@ -55,7 +56,7 @@ $factory->define(App\cbtt::class, function (Faker $faker) {
 $factory->define(App\PhieuDKHoc::class, function (Faker $faker) {
     return [
       'MaHocVien' =>hocvien::all()->unique()->random()->MaHocVien,
-      'id' =>  7,
+      'id' =>  1,
       'TinhTrang' => 1,
       
     ];
@@ -63,7 +64,7 @@ $factory->define(App\PhieuDKHoc::class, function (Faker $faker) {
 $factory->define(App\phieudkthi::class, function (Faker $faker) {
     return [
       'MaHocVien' =>hocvien::all()->unique()->random()->MaHocVien,
-      'MaKiThi' =>  4,
+      'MaKiThi' =>  kythi::all()->unique()->random()->MaKiThi,
       'TinhTrang' => 1,
       
     ];

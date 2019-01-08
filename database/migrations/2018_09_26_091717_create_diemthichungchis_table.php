@@ -21,8 +21,8 @@ class CreateDiemthichungchisTable extends Migration
              $table->text('DiemThi')->nullable();
 
 
-             $table->foreign('MaHocVien')->references('MaHocVien')->on('hocvien');
-             $table->foreign('MaKiThi')->references('MaKiThi')->on('kythis');
+             $table->foreign('MaHocVien')->references('MaHocVien')->on('hocvien')->onUpdate('cascade')->onDelete('cascade');
+             $table->foreign('MaKiThi')->references('MaKiThi')->on('kythis')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

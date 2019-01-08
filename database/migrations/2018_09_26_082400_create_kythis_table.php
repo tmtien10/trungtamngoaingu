@@ -23,7 +23,7 @@ class CreateKythisTable extends Migration
               $table->float('LePhi', 255,2);
             $table->timestamps();
 
-            $table->foreign('MaCC')->references('MaCC')->on('chungchis');
+            $table->foreign('MaCC')->references('MaCC')->on('chungchis')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

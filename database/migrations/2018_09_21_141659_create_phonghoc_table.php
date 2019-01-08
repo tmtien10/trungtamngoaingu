@@ -16,8 +16,7 @@ class CreatePhonghocTable extends Migration
         Schema::create('phonghoc', function (Blueprint $table) {
             $table->increments('MaPhongHoc');
             $table->integer('MaKhuVuc')->unsigned();
-            $table->timestamps();
-           $table->foreign('MaKhuVuc')->references('MaKhuVuc')->on('khuvuc');
+           $table->foreign('MaKhuVuc')->references('MaKhuVuc')->on('khuvuc')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

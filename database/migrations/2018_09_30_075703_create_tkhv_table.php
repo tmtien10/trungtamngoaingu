@@ -18,8 +18,8 @@ class CreateTkhvTable extends Migration
             $table->string('MaHocVien',10);
              $table->primary(['username', 'MaHocVien']);
 
-             $table->foreign('MaHocVien')->references('MaHocVien')->on('hocvien');;
-             $table->foreign('username')->references('username')->on('taikhoan');;
+             $table->foreign('MaHocVien')->references('MaHocVien')->on('hocvien')->onUpdate('cascade')->onDelete('cascade');;
+             $table->foreign('username')->references('username')->on('taikhoan')->onUpdate('cascade')->onDelete('cascade');;
             $table->timestamps();
         });
     }

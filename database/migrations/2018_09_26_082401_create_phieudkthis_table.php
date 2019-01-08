@@ -20,8 +20,8 @@ class CreatePhieudkthisTable extends Migration
             $table->string('TinhTrang');
             $table->timestamps();
 
-             $table->foreign('MaHocVien')->references('MaHocVien')->on('hocvien');
-             $table->foreign('MaKiThi')->references('MaKiThi')->on('kythis');
+             $table->foreign('MaHocVien')->references('MaHocVien')->on('hocvien')->onUpdate('cascade')->onDelete('cascade');
+             $table->foreign('MaKiThi')->references('MaKiThi')->on('kythis')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

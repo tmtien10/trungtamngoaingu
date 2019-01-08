@@ -21,9 +21,9 @@ class CreatePhieuDKHocTable extends Migration
                 $table->date('ThoiGianDKHoc');
               $table->integer('TinhTrang');
 
-              $table->foreign('MaHocVien')->references('MaHocVien')->on('hocvien');
+              $table->foreign('MaHocVien')->references('MaHocVien')->on('hocvien')->onUpdate('cascade')->onDelete('cascade');
               
-              $table->foreign('id')->references('id')->on('lopkhoa');
+              $table->foreign('id')->references('id')->on('lopkhoa')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

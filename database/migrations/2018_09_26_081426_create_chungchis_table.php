@@ -16,7 +16,6 @@ class CreateChungchisTable extends Migration
         Schema::create('chungchis', function (Blueprint $table) {
             $table->increments('MaCC');
             $table->string('tenCC');
-            $table->text('thangDiemXL');
         });
     }
 

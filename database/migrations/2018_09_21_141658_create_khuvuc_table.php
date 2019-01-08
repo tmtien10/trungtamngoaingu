@@ -16,7 +16,6 @@ class CreateKhuvucTable extends Migration
         Schema::create('khuvuc', function (Blueprint $table) {
             $table->increments('MaKhuVuc');
              $table->string('TenKhuVuc');
-            $table->timestamps();
         });
     }
 

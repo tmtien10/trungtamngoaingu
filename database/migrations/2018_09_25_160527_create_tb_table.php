@@ -24,7 +24,7 @@ class CreateTbTable extends Migration
 
             $table->timestamps();
 
-            $table->foreign('MaNV')->references('MaNV')->on('cbtt');;
+            $table->foreign('MaNV')->references('MaNV')->on('cbtt')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

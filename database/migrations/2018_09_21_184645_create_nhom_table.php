@@ -20,8 +20,8 @@ class CreateNhomTable extends Migration
               $table->string('TenNhom',100);
                 $table->integer('SLHocVien');
             $table->timestamps();
-            $table->foreign('MaPhongHoc')->references('MaPhongHoc')->on('phonghoc');
-             $table->foreign('id')->references('id')->on('lopkhoa');
+            $table->foreign('MaPhongHoc')->references('MaPhongHoc')->on('phonghoc')->onUpdate('cascade')->onDelete('cascade');
+             $table->foreign('id')->references('id')->on('lopkhoa')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
