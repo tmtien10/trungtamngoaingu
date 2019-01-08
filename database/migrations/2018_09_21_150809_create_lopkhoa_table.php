@@ -15,8 +15,8 @@ class CreateLopKhoaTable extends Migration
     {
         Schema::create('lopkhoa', function (Blueprint $table) {
            $table->increments('id');
-            $table->string('MaLop',10);
-            $table->string('MaKhoa',10);
+            $table->integer('MaLop')->unsigned();
+            $table->integer('MaKhoa')->unsigned();
             $table->date('NgayKhaiGiang');
             $table->date('NgayKetThuc');
              $table->string('TieuDe');
