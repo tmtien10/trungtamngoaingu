@@ -18,10 +18,13 @@ class CreateTriggerHv extends Migration
         CREATE TRIGGER hocvien_table_insert
         BEFORE INSERT ON hocvien
         FOR EACH ROW
+        $BODY$
         BEGIN
          INSERT INTO hocvien_sq1 VALUES (NULL);
          SET NEW.MaHocVien = CONCAT("HV", LPAD(LAST_INSERT_ID(), 3, "00"));
         END;
+        $BODY$
+        LANGUAGE plpgsql;
     ');
     }
 
