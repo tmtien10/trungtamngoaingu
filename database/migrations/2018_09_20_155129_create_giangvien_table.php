@@ -22,7 +22,7 @@ class CreateGiangvienTable extends Migration
             $table->string('EmailGV');
             $table->string('SDTGV');
             $table->string('DiaChiGV');
-            $table->integer('TinhTrang',5);
+            $table->text('TinhTrang',5);
             $table->timestamps();
         });
     }
