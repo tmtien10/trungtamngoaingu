@@ -16,7 +16,7 @@ class CreateHoadonthisTable extends Migration
         Schema::create('hoadonthis', function (Blueprint $table) {
             $table->increments('id_hoadon');
             $table->integer('idphieudk')->unsigned();
-            $table->string('MaNV',10);
+            $table->integer('MaNV')->unsigned();
             $table->integer('phongthi');
             
 

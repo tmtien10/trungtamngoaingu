@@ -14,7 +14,7 @@ class CreateGiangvienTable extends Migration
     public function up()
     {
         Schema::create('giangvien', function (Blueprint $table) {
-            $table->string('MaGV',10)->primary();
+            $table->increments('MaGV');
             $table->string('HoTenGV');
             $table->string('GioiTinhGV');
             $table->date('NgaySinhGV');

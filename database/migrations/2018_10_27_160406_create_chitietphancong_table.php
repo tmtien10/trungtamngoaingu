@@ -15,9 +15,9 @@ class CreateChitietphancongTable extends Migration
     {
         Schema::create('chitietphancong', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('MaGV',10);
+            $table->integer('MaGV')->unsigned();
              $table->integer('MaMonHoc')->unsigned();
-            $table->string('MaNhom',10);
+            $table->integer('MaNhom')->unsigned();
              $table->integer('id_ThoiGian')->unsigned();
              $table->integer('id_TKB')->unsigned();
               $table->integer('id_TietHoc')->unsigned();

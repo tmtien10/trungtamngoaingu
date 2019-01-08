@@ -14,11 +14,11 @@ class CreateThuocLopHocsTable extends Migration
     public function up()
     {
         Schema::create('thuoc_lop_hocs', function (Blueprint $table) {
-             $table->string('MaNhom',10);
-             $table->string('MaHocVien',10);
+             $table->integer('MaNhom')->unsigned();
+             $table->integer('MaHocVien')->unsigned();
                 $table->primary(['MaHocVien','MaNhom']);
-                  $table->foreign('MaHocVien')->references('MaHocVien')->on('hocvien');
-             $table->foreign('MaNhom')->references('MaNhom')->on('nhom');
+                  $table->foreign('MaHocVien')->references('MaHocVien')->on('hocvien')->onUpdate('cascade')->onDelete('cascade');
+             $table->foreign('MaNhom')->references('MaNhom')->on('nhom')->onUpdate('cascade')->onDelete('cascade');;
             $table->timestamps();
         });
     }

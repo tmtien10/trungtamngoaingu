@@ -15,7 +15,7 @@ class CreateTkhocgiangvienTable extends Migration
     {
         Schema::create('tkhocgiangvien', function (Blueprint $table) {
             $table->string('username');
-              $table->string('MaGV');
+              $table->integer('MaGV')->unsigned();
              $table->primary(['MaGV','username']);
             $table->foreign('MaGV')->references('MaGV')->on('giangvien')->onUpdate('cascade')->onDelete('cascade');
              $table->foreign('username')->references('username')->on('taikhoan')->onUpdate('cascade')->onDelete('cascade');

@@ -14,7 +14,7 @@ class CreateCbttTable extends Migration
     public function up()
     {
         Schema::create('cbtt', function (Blueprint $table) {
-            $table->string('MaNV',10)->primary();
+            $table->increments('MaNV');
             $table->string('HoTenNV');
             $table->string('GioiTinhNV');
             $table->date('NgaySinhNV');

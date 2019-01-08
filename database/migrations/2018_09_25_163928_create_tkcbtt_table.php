@@ -15,7 +15,7 @@ class CreateTkcbttTable extends Migration
     {
         Schema::create('tkcbtt', function (Blueprint $table) {
             $table->string('username',10);
-             $table->string('MaNV',10);
+             $table->integer('MaNV')->unsigned();
              $table->primary(['username', 'MaNV']);
 
              $table->foreign('MaNV')->references('MaNV')->on('cbtt')->onDelete('cascade')

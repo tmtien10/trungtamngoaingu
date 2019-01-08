@@ -16,7 +16,7 @@ class CreatePhieudkthisTable extends Migration
         Schema::create('phieudkthis', function (Blueprint $table) {
             $table->increments('idphieudk');
             $table->integer('MaKiThi')->unsigned();
-            $table->string('MaHocVien');
+            $table->integer('MaHocVien')->unsigned();
             $table->string('TinhTrang');
             $table->timestamps();
 

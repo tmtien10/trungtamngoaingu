@@ -15,7 +15,7 @@ class CreateTbTable extends Migration
     {
         Schema::create('thongbao', function (Blueprint $table) {
             $table->increments('MaTB');
-            $table->string('MaNV',10);
+            $table->integer('MaNV')->unsigned();
             $table->string('TenTB',100);
             $table->text('NoiDungTB');
             $table->integer('LoaiTB');

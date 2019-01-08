@@ -14,7 +14,7 @@ class CreateLopHocTable extends Migration
     public function up()
     {
         Schema::create('lophoc', function (Blueprint $table) {
-            $table->string('MaLop',10)->primary();
+            $table->increments('MaLop');
             $table->string('TenLop');
             $table->integer('id_TietHoc')->unsigned();
             $table->string('SoTuanHoc');

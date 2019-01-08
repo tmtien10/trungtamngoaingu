@@ -14,7 +14,7 @@ class CreateNhomTable extends Migration
     public function up()
     {
         Schema::create('nhom', function (Blueprint $table) {
-             $table->string('MaNhom',10)->primary();
+             $table->increments('MaNhom');
            $table->integer('id')->unsigned();
              $table->integer('MaPhongHoc')->unsigned();
               $table->string('TenNhom',100);

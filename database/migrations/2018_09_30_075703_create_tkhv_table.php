@@ -15,7 +15,7 @@ class CreateTkhvTable extends Migration
     {
         Schema::create('tkhv', function (Blueprint $table) {
             $table->string('username',10);
-            $table->string('MaHocVien',10);
+            $table->integer('MaHocVien')->unsigned();
              $table->primary(['username', 'MaHocVien']);
 
              $table->foreign('MaHocVien')->references('MaHocVien')->on('hocvien')->onUpdate('cascade')->onDelete('cascade');;

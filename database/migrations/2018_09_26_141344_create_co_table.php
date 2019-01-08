@@ -15,7 +15,7 @@ class CreateCoTable extends Migration
     {
         Schema::create('co', function (Blueprint $table) {
             $table->integer('MaKM')->unsigned();
-           $table->string('MaLop',10);
+           $table->integer('MaLop')->unsigned();
                $table->primary(['MaKM','MaLop']);
                 $table->foreign('MaKM')->references('MaKM')->on('khuyenmai')->onUpdate('cascade')->onDelete('cascade');
              $table->foreign('MaLop')->references('MaLop')->on('lophoc')->onUpdate('cascade')->onDelete('cascade');

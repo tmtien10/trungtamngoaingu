@@ -14,7 +14,7 @@ class CreateDiemthichungchisTable extends Migration
     public function up()
     {
         Schema::create('diemthichungchis', function (Blueprint $table) {
-             $table->string('MaHocVien',10);
+             $table->integer('MaHocVien')->unsigned();
              $table->integer('MaKiThi')->unsigned();
              $table->primary(['MaHocVien','MaKiThi']);
              $table->integer('PhongThi');

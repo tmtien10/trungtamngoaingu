@@ -14,7 +14,7 @@ class CreateHocvienTable extends Migration
     public function up()
     {
         Schema::create('hocvien', function (Blueprint $table) {
-            $table->string('MaHocVien',10)->primary();
+            $table->increments('MaHocVien');
             $table->string('HoTenHocVien');
             $table->string('GioiTinh'); //da sua kieu dl thanh varchar
             $table->date('NgaySinh');

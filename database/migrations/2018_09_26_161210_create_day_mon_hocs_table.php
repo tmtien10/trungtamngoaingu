@@ -15,7 +15,7 @@ class CreateDayMonHocsTable extends Migration
     {
         Schema::create('day_mon_hocs', function (Blueprint $table) {
               $table->integer('MaMonHoc')->unsigned();
-             $table->string('MaGV',10);
+             $table->integer('MaGV')->unsigned();
                 $table->primary(['MaMonHoc','MaGV']);
                   $table->foreign('MaGV')->references('MaGV')->on('giangvien')->onUpdate('cascade')->onDelete('cascade');
              $table->foreign('MaMonHoc')->references('MaMonHoc')->on('monhoc')->onUpdate('cascade')->onDelete('cascade');

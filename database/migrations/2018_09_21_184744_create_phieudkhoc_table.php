@@ -15,7 +15,7 @@ class CreatePhieuDKHocTable extends Migration
     {
         Schema::create('phieudkhoc', function (Blueprint $table) {
             $table->increments('id_PhieuDKHoc');
-              $table->string('MaHocVien',10);
+              $table->integer('MaHocVien')->unsigned();
              
                $table->integer('id')->unsigned();
                 $table->date('ThoiGianDKHoc');
