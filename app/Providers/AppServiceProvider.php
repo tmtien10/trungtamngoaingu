@@ -6,7 +6,6 @@ use App\LopKhoa;
 use DB;
 use Session;
 use Illuminate\Support\ServiceProvider;
-use URL;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -16,6 +15,8 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
+    use URL;
+
     public function boot()
     {
         URL::forceScheme('https');
