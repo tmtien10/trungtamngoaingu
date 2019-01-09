@@ -345,12 +345,12 @@ $taikhoan= DB::table('taikhoan')->join('tkhv','tkhv.username','=','taikhoan.user
         $tong_hoc_vien=hocvien::count('MaHocVien');
         $tong_ki_thi=kythi::count('MaKiThi');
         $lop=DB::select(DB::raw('select "TenLop" ,count(*) as Tong
-           FROM lophoc,lopkhoa, phieudkhoc where lophoc.MaLop=lopkhoa.MaLop and phieudkhoc.id=lopkhoa.id
+           FROM lophoc,lopkhoa, phieudkhoc where "lophoc.MaLop"="lopkhoa.MaLop" and "phieudkhoc.id"="lopkhoa.id"
           GROUP BY "TenLop"
           ORDER BY count(*) DESC
            LIMIT 3'));
         $lop1=DB::select(DB::raw('select "TenLop" ,count(*) as Tong
-           FROM lophoc,lopkhoa, phieudkhoc where lophoc.MaLop=lopkhoa.MaLop and phieudkhoc.id=lopkhoa.id
+           FROM lophoc,lopkhoa, phieudkhoc where "lophoc.MaLop"="lopkhoa.MaLop" and "phieudkhoc.id"="lopkhoa.id"
           GROUP BY "TenLop"
           ORDER BY count(*) DESC'));
         $pie[]=['Tên lớp','Tổng'];
