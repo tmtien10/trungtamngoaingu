@@ -14,7 +14,7 @@ use DB;
 
 use Mail;
 use App\hocvien;
-use App\tkHocVien;
+use App\TKHocVien;
 use App\taikhoan;
 
 use App\Mail\UserEmail;
@@ -136,7 +136,7 @@ class RegisterController extends Controller
             'NgheNghiep'=>$data['nghenghiep']
         ]);
       $userid=hocvien::getlastID()->first();
-      tkHocVien::create([
+      TKHocVien::create([
             'MaHocVien'=>$userid->MaHocVien,
             'username'=>$data['username'],        
       ]);
