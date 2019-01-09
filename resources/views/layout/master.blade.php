@@ -7,9 +7,9 @@
 <link rel="stylesheet" type="text/css" href="css/css.css"/>
 <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 <script language="javascript" src="js/myFunction.js"></script>
- <script src="code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+ <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 <script language="javascript" src="js/script.js"></script>
-<link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <script src="js/jssor.slider.min.js" type="text/javascript"></script>
  <link href="Content/slick.css" rel="stylesheet" />
     <link href="Content/slick-theme.css" rel="stylesheet" />

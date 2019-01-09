@@ -353,12 +353,12 @@ $taikhoan= DB::table('taikhoan')->join('tkhv','tkhv.username','=','taikhoan.user
         $lop1=DB::select(DB::raw('select "TenLop" ,count(*) as Tong
            FROM "lophoc","lopkhoa", "phieudkhoc" where "lophoc.MaLop"="lopkhoa.MaLop" and "phieudkhoc.id"="lopkhoa.id"
           GROUP BY "TenLop"
-          ORDER BY count(*) DESC'));*/
+          ORDER BY count(*) DESC'));
         $pie[]=['Tên lớp','Tổng'];
         foreach ($lop1 as $lop1) {
           # code...
           $pie[]=[$lop1->TenLop,$lop1->Tong];
-        }
+        }*/
 
         $events = [];
         $data1 = kythi::all();
@@ -404,8 +404,8 @@ $taikhoan= DB::table('taikhoan')->join('tkhv','tkhv.username','=','taikhoan.user
             }
         }
         $calendar = Calendar::addEvents($events);
-        $a1=json_encode($pie);
-        return view('admin.index',(compact('calendar','lop','tong_lop','tong_dang_ki','tong_ki_thi','tong_hoc_vien','a1')));
+       // $a1=json_encode($pie);
+        return view('admin.index',(compact('calendar','lop','tong_lop','tong_dang_ki','tong_ki_thi','tong_hoc_vien')));
   }
    
 }
