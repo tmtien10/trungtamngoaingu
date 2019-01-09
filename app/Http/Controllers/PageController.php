@@ -344,6 +344,7 @@ $taikhoan= DB::table('taikhoan')->join('tkhv','tkhv.username','=','taikhoan.user
         $tong_dang_ki=PhieuDKHoc::count('id_PhieuDKHoc');
         $tong_hoc_vien=hocvien::count('MaHocVien');
         $tong_ki_thi=kythi::count('MaKiThi');
+        /*$lop=DB::table('lopkhoa')->join('lophoc','lopkhoa.MaLop','=','lophoc.MaLop')->join('phieudkhoc','phieudkhoc.id','lopkhoa.id')->groupBy('lophoc.TenLop')->orderBy()
         $lop=DB::select(DB::raw('select "TenLop" ,count(*) as Tong
            FROM "lophoc","lopkhoa", "phieudkhoc" where "lophoc.MaLop"="lopkhoa.MaLop" and "phieudkhoc.id"="lopkhoa.id"
           GROUP BY "TenLop"
@@ -352,7 +353,7 @@ $taikhoan= DB::table('taikhoan')->join('tkhv','tkhv.username','=','taikhoan.user
         $lop1=DB::select(DB::raw('select "TenLop" ,count(*) as Tong
            FROM "lophoc","lopkhoa", "phieudkhoc" where "lophoc.MaLop"="lopkhoa.MaLop" and "phieudkhoc.id"="lopkhoa.id"
           GROUP BY "TenLop"
-          ORDER BY count(*) DESC'));
+          ORDER BY count(*) DESC'));*/
         $pie[]=['Tên lớp','Tổng'];
         foreach ($lop1 as $lop1) {
           # code...
