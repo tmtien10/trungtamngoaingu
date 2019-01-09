@@ -18,6 +18,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        URL::forceScheme('https');
+
         view()->composer('layout.header',function($view){
             $lophoc =  LopHoc::orderBy('MaLop','DESC')->get();
              $view->with('lophoc',$lophoc);
