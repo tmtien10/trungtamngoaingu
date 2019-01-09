@@ -405,7 +405,7 @@ $taikhoan= DB::table('taikhoan')->join('tkhv','tkhv.username','=','taikhoan.user
         }
         $calendar = Calendar::addEvents($events);
        // $a1=json_encode($pie);
-        return view('admin.index',(compact('calendar','lop','tong_lop','tong_dang_ki','tong_ki_thi','tong_hoc_vien')));
+        return view('admin.index',(compact('calendar','tong_lop','tong_dang_ki','tong_ki_thi','tong_hoc_vien')));
   }
    
 }
