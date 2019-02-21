@@ -600,7 +600,7 @@
 					</li>
 				 @if(Auth::user()->quyen==1)
 					<li class="">
-						<a href="#" class="dropdown-toggle">
+						<a class="dropdown-toggle">
 							<i class="menu-icon fa fa-bullhorn "></i>
 							<span class="menu-text"> THÔNG BÁO</span>
 
