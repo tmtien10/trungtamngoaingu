@@ -53,20 +53,17 @@ class LopKhoaController extends Controller
                  'NgayChan.required'=>'Bạn chưa nhập thứ ngày học',
                  
             ]);
-        $lopkhoa = new lopkhoa;
+          $lopkhoa = new lopkhoa;
        
-         $lopkhoa->MaKhoa = $request->KhoaHoc;
+          $lopkhoa->MaKhoa = $request->KhoaHoc;
           $lopkhoa->MaLop = $request->LopHoc;
-		$lopkhoa->HocPhi = $request->HocPhi;
+		      $lopkhoa->HocPhi = $request->HocPhi;
+          $lopkhoa->BuoiHoc='none';
           $lopkhoa->NgayKhaiGiang = $request->NgayKhaiGiang;
-        $lopkhoa->NgayKetThuc = $request->NgayKetThuc;
+          $lopkhoa->NgayKetThuc = $request->NgayKetThuc;
           $lopkhoa->TieuDe= $request->TieuDe;
-
-        
-       $lopkhoa->NgayChan = json_encode($request->NgayChan);
-        
-        
-        $lopkhoa->save();
+          $lopkhoa->NgayChan = json_encode($request->NgayChan);
+          $lopkhoa->save();
        
         return redirect('ad/lopkhoa/danhsach')->with('thongbao','Thêm lớp khóa thành công');
     }

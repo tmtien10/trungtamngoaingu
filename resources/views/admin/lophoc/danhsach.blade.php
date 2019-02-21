@@ -82,16 +82,16 @@
 
 														@foreach($lophoc as $lh)	
 												<tr role="row" class="odd">
-														<td class="hidden-480">
+														<td>
 															{{$lh->MaLop}}
 															
 														</td>
 
-														<td class="hidden-480">
+														<td >
 															{{$lh->TenLop}}
 															
 														</td>
-														<td class="hidden-480">{{$lh->SoTuanHoc}}
+														<td >{{$lh->SoTuanHoc}}
 														</td>
 														<td class="hidden-480">{{$lh->id_TietHoc}}</td>
 														
@@ -130,16 +130,9 @@
 																	</button>
 
 																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																	
 																		<li>
-																			<a href="#" class="tooltip-info" data-rel="tooltip" title="" data-original-title="View">
-																				<span class="blue">
-																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																				</span>
-																			</a>
-																		</li>
-
-																		<li>
-																			<a href="#" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Edit">
+																			<a href="ad/lophoc/sua/{{$lh->MaLop}}" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Edit">
 																				<span class="green">
 																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
 																				</span>
@@ -147,7 +140,7 @@
 																		</li>
 
 																		<li>
-																			<a href="#" class="tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">
+																			<a data-href="ad/lophoc/xoa/{{$lh->MaLop}}" data-toggle="modal" data-target="#confirm-delete"tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">
 																				<span class="red">
 																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
 																				</span>
