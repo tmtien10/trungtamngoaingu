@@ -156,7 +156,6 @@
 								{!! $calendar->calendar() !!}
 									
 
-								<!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
 						</div>
 

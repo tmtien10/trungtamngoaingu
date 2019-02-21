@@ -30,7 +30,7 @@ class DiemThiController extends Controller
                 		if((!$data->isEmpty()) && ($data->count())){
  
                    			 foreach ($data as $key => $value) {
-                   			 	$ma=substr($value->hoc_vien, 0,5);
+                   			 	$ma=substr($value->hoc_vien, 0,1);
                    			 	$check=[
 						
 										'nghe'=>$value->nghe,

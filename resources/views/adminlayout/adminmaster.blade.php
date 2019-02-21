@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 
-
+		<base href="{{asset('')}}">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>@yield('title')</title>
@@ -55,7 +55,7 @@
 
 				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
-						<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+						<ul class="nav ace-nav">
 								
 						<li class="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
