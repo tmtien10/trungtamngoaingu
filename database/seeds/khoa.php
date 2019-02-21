@@ -12,9 +12,7 @@ class khoa extends Seeder
     public function run()
     {
         //
-        DB::table('khoahoc')->insert([
-        	['TenKhoaHoc'=>'K01','Nam'=>'2018'],
-        	['TenKhoaHoc'=>'K02','Nam'=>'2019'],
-        ]);
+        DB::table('khoahoc')->insert(['TenKhoaHoc'=>'K01','Nam'=>'2018']);
+        DB::table('khoahoc')->insert(['TenKhoaHoc'=>'K02','Nam'=>'2019']);
     }
 }

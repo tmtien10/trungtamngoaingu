@@ -11,7 +11,7 @@ class cbtt extends Model
      protected $primaryKey = 'MaNV';
     public $incrementing    = false;
      protected $fillable = [
-        'MaNV','HoTenNV', 'GioiTinhNV', 'NgaySinhNV','DiaChiNV','SDTNV','EmailNV'
+        'MaNV','HoTenNV', 'GioiTinhNV', 'NgaySinhNV','DiaChiNV','SDTNV','EmailNV', 'TinhTrang'
     ];
 
     public $timestamps=false;

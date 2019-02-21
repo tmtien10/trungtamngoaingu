@@ -14,6 +14,6 @@ class ChungChi extends Seeder
         //
         DB::table('chungchis')->insert(['tenCC'=>'TOEIC']);
         DB::table('chungchis')->insert(['tenCC'=>'A,B,C quốc gia']);
-        DB::table('chungchis')->insert(['tenCC'=>'IELTS']);,
+        DB::table('chungchis')->insert(['tenCC'=>'IELTS']);
     }
 }

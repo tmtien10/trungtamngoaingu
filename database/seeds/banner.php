@@ -12,9 +12,7 @@ class banner extends Seeder
     public function run()
     {
         //
-        DB::table('slide')->insert([
-        	['image'=>'banner1.jpg'],
-        	['image'=>'banner2.jpg'],
-        ]);
+        DB::table('slide')->insert(['image'=>'banner1.jpg']);
+         DB::table('slide')->insert(['image'=>'banner2.jpg']);
     }
 }
