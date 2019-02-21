@@ -72,12 +72,12 @@
 
 												<div class="radio">
 													<label>
-														<input name="gioitinh" class="ace" type="radio">
-														<span class="lbl"> Nam</span>
+														<input name="gioitinh" class="ace" type="radio" value="Nam">
+														<span class="lbl"> Nam</ span>
 														
 													</label>
 													<label>
-														<input name="gioitinh" class="ace" type="radio">
+														<input name="gioitinh" class="ace" type="radio" value="Nữ">
 														<span class="lbl"> Nữ</span>
 														
 													</label>
