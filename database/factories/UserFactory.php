@@ -38,6 +38,7 @@ $factory->define(App\giangvien::class, function (Faker $faker) {
     ->format('Y/m/d'),
         'SDTGV'=>$faker->unique()->phoneNumber,
         'DiaChiGV'=>$faker->address,
+        'TinhTrang'=>1
     ];
 });
 $factory->define(App\cbtt::class, function (Faker $faker) {
@@ -57,7 +58,7 @@ $factory->define(App\cbtt::class, function (Faker $faker) {
 $factory->define(App\PhieuDKHoc::class, function (Faker $faker) {
     return [
       'MaHocVien' =>hocvien::all()->unique()->random()->MaHocVien,
-      'id' =>  1,
+      'id' =>  7,
       'TinhTrang' => 1,
       
     ];
