@@ -160,12 +160,12 @@ Route::middleware(['IsAdmin'])->group(function () {
 
 //tài khoản
 
-Route::get('ad/taikhoan','TaiKhoanController@viewlist');
-Route::get('ad/taikhoan/them','TaiKhoanController@viewcreate' );
-Route::post('ad/taikhoan/savenew','TaiKhoanController@postCreate' );
-Route::get('ad/taikhoan/{username}','TaiKhoanController@viewUpdate' );
-Route::post('ad/taikhoan/saveedit','TaiKhoanController@postUpdate' );
-Route::get('ad/taikhoan/del/{username}','TaiKhoanController@delete' );
+Route::get('ad/taikhoan','TaikhoanController@viewlist');
+Route::get('ad/taikhoan/them','TaikhoanController@viewcreate' );
+Route::post('ad/taikhoan/savenew','TaikhoanController@postCreate' );
+Route::get('ad/taikhoan/{username}','TaikhoanController@viewUpdate' );
+Route::post('ad/taikhoan/saveedit','TaikhoanController@postUpdate' );
+Route::get('ad/taikhoan/del/{username}','TaikhoanController@delete' );
 
 //cbtt
 Route::get('ad/cbtt','CBTTController@viewCBTT');
