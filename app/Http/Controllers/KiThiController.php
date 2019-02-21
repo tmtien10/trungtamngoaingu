@@ -121,13 +121,13 @@ class KiThiController extends Controller
     	if((!isset($loai))&&(!isset($time)))  return $this->view();
 
     	if((isset($loai)) && (isset($time))){
-    	$kithi=DB::table('kythis')->join('chungchis','kythis.MaCC','=','chungchis.MaCC')->whereMonth('kythis.NgayThi',date('m-Y',strtotime($time)))->where('chungchis.MaCC',$loai)->get();
+    	$kithi=DB::table('kythis')->join('chungchis','kythis.MaCC','=','chungchis.MaCC')->whereMonth('kythis.NgayThi',date('m',strtotime($time)))->where('chungchis.MaCC',$loai)->get();
     	$chungchi=chungchi::all();
 
     	return view('page.tochuckithi')->with(['kithi'=>$kithi,'chungchi'=>$chungchi,'time'=>$time,'loai'=>$loai]);
     	}
     	if(isset($time)){
-    	$kithi=DB::table('kythis')->join('chungchis','kythis.MaCC','=','chungchis.MaCC')->whereMonth('NgayThi',date('m-Y',strtotime($time)))->get();
+    	$kithi=DB::table('kythis')->join('chungchis','kythis.MaCC','=','chungchis.MaCC')->whereMonth('NgayThi',date('m',strtotime($time)))->get();
     	$chungchi=chungchi::all();
 
     	return view('page.tochuckithi')->with(['kithi'=>$kithi,'chungchi'=>$chungchi,'time'=>$time,'loai'=>$loai]);

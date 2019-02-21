@@ -13,7 +13,10 @@ class monhoc extends Seeder
     {
         //
         
-
+    	DB::table('monhoc')->insert('TenMonHoc'=>'Speaking','GioiThieu'=>'Speaking');
+        DB::table('monhoc')->insert('TenMonHoc'=>'Listening','GioiThieu'=>'Speaking');
+        DB::table('monhoc')->insert('TenMonHoc'=>'Writting','GioiThieu'=>'Speaking');
+        DB::table('monhoc')->insert('TenMonHoc'=>'Gramma','GioiThieu'=>'Speaking');
         
     }
 }
