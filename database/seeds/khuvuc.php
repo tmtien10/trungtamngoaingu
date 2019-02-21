@@ -12,10 +12,10 @@ class khuvuc extends Seeder
     public function run()
     {
         //
-        DB::table('khuvuc')->insert(
+        DB::table('khuvuc')->insert([
         	['TenKhuVuc'=>'A0'],
         	['TenKhuVuc'=>'A1'],
-        	['TenKhuVuc'=>'A7']
-        );
+        	['TenKhuVuc'=>'A7'],
+        ]);
     }
 }

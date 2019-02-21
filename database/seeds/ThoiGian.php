@@ -11,7 +11,7 @@ class ThoiGian extends Seeder
      */
     public function run()
     {
-        DB::table('thoigian')->insert(
+        DB::table('thoigian')->insert([
             ['id_ThoiGian'=>'0','Thu'=>'CN'],
             ['id_ThoiGian'=>'1','Thu'=>'2'],
             ['id_ThoiGian'=>'2','Thu'=>'3'],
@@ -19,7 +19,7 @@ class ThoiGian extends Seeder
             ['id_ThoiGian'=>'4','Thu'=>'5'],
             ['id_ThoiGian'=>'5','Thu'=>'6'],
 
-        );
+        ]);
 
     }
 }
