@@ -96,7 +96,7 @@
 														        <option value="{{$t->id_TietHoc}}"
 														        	@if( $lophoc->id_TietHoc == $t->id_TietHoc)
 														        	selected="selected" @endif>
-														        	{{{date('h:i:s A',strtotime($t->ThoiGianBD))}}/{{date('h:i:s A',strtotime($t->ThoiGianKT))}}</option>
+														        	{{date('h:i:s A',strtotime($t->ThoiGianBD))}}/{{date('h:i:s A',strtotime($t->ThoiGianKT))}}</option>
 															  
 															
 														@endforeach	

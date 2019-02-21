@@ -9,6 +9,7 @@ class PhongHoc extends Model
    protected $table = "phonghoc";
    protected $primaryKey = 'MaPhongHoc'; 
    protected $fillable = ['MaPhongHoc','MaKhuVuc'];
+   public $timestamps = false;
 
    public function khuvuc()
 	{
