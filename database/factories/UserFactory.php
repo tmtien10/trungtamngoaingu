@@ -50,6 +50,7 @@ $factory->define(App\cbtt::class, function (Faker $faker) {
     ->format('Y/m/d'),
         'SDTNV'=>$faker->unique()->phoneNumber,
         'DiaChiNV'=>$faker->address,
+        'TinhTrang'=>1,
     ];
 });
 
