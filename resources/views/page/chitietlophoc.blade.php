@@ -31,7 +31,7 @@
       
   <div class="b">Số tuần học: {{$lop->SoTuanHoc}} tuần </div>
   <?php $t=DB::table('tiethoc')->where('id_TietHoc',$lop->id_TietHoc)->first();?>
-    <div class="b">Thời gian học: {{date('h:i:s A',strtotime($t->ThoiGianBD)}} giờ - {{date('h:i:s A',strtotime($t->ThoiGianKT)}} giờ </div>
+    <div class="b">Thời gian học: {{date('h:i:s A',strtotime($t->ThoiGianBD))}} giờ - {{date('h:i:s A',strtotime($t->ThoiGianKT))}} giờ </div>
 
 
   <div class="b">Giới thiệu về lớp học</div>
