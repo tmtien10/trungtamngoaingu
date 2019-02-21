@@ -45,7 +45,7 @@ class CBTTController extends Controller
         'DiaChiNV'=>$data['diachi'],
         'EmailNV'=>$data['email'],
         'SDTNV'=>$data['dienthoai'],
-        'TinhTrang'=>1,
+        'TinhTrang'=>'1',
       ]);
     }
     protected function update($data){
