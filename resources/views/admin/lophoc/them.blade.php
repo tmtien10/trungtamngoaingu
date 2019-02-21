@@ -93,7 +93,7 @@
 													<select name="TietHoc">
 														@foreach($tiethoc as $t)
                                 
-								  <option value="{{$t->id_TietHoc}}">{{date('h:i:s',strtotime($t->ThoiGianBD))}}/{{date('h:i:s',strtotime($t->ThoiGianKT))}}</option>
+								  <option value="{{$t->id_TietHoc}}">{{date('h:i:s A',strtotime($t->ThoiGianBD))}}/{{date('h:i:s A',strtotime($t->ThoiGianKT))}}</option>
 								  @endforeach
 
 								</select>			
