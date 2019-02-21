@@ -44,12 +44,8 @@ class MonHocController extends Controller
         
 				
         ]);
-      //sau khi bat loi, ta tao doi tuong 
-      $monhoc = new MonHoc;
-      $monhoc->TenMonHoc = $request->TenMonHoc;
-      $monhoc->GioiThieu = $request->GioiThieu;
-      $monhoc->save();
-
+    
+      DB::table('monhoc')->insert(['TenMonHoc'=>$request->TenMonHoc,'GioiThieu'=>$request->GioiThieu]);
       
 
     
