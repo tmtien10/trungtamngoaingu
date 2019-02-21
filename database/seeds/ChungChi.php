@@ -12,11 +12,8 @@ class ChungChi extends Seeder
     public function run()
     {
         //
-        DB::table('chungchis')->insert([
-        	['tenCC'=>'TOEIC'],
-        	['tenCC'=>'A,B,C quốc gia'],
-        	['tenCC'=>'IELTS'],
-        	['tenCC'=>'TOEFL cBT'],
-        ]);
+        DB::table('chungchis')->insert(['tenCC'=>'TOEIC']);
+        DB::table('chungchis')->insert(['tenCC'=>'A,B,C quốc gia']);
+        DB::table('chungchis')->insert(['tenCC'=>'IELTS']);,
     }
 }
