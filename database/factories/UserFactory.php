@@ -25,7 +25,7 @@ $factory->define(App\hocvien::class, function (Faker $faker) {
         'NgaySinh'=>$faker->dateTimeBetween('1975-01-01', '2000-12-31')
     ->format('Y/m/d'),
         'SDT'=>$faker->unique()->phoneNumber,
-        'DiaChi'=>$faker->address,
+        'DiaChi'=>$faker->address
     ];
 });
 $factory->define(App\giangvien::class, function (Faker $faker) {
@@ -38,7 +38,7 @@ $factory->define(App\giangvien::class, function (Faker $faker) {
     ->format('Y/m/d'),
         'SDTGV'=>$faker->unique()->phoneNumber,
         'DiaChiGV'=>$faker->address,
-        'TinhTrang'=>1,
+        'TinhTrang'=>1
     ];
 });
 $factory->define(App\cbtt::class, function (Faker $faker) {
@@ -51,7 +51,7 @@ $factory->define(App\cbtt::class, function (Faker $faker) {
     ->format('Y/m/d'),
         'SDTNV'=>$faker->unique()->phoneNumber,
         'DiaChiNV'=>$faker->address,
-        'TinhTrang'=>1,
+        'TinhTrang'=>1
     ];
 });
 
@@ -59,7 +59,7 @@ $factory->define(App\PhieuDKHoc::class, function (Faker $faker) {
     return [
       'MaHocVien' =>hocvien::all()->unique()->random()->MaHocVien,
       'id' =>  7,
-      'TinhTrang' => 1,
+      'TinhTrang' => 1
       
     ];
 });
@@ -67,7 +67,7 @@ $factory->define(App\phieudkthi::class, function (Faker $faker) {
     return [
       'MaHocVien' =>hocvien::all()->unique()->random()->MaHocVien,
       'MaKiThi' =>  kythi::all()->unique()->random()->MaKiThi,
-      'TinhTrang' => 1,
+      'TinhTrang' => 1
       
     ];
 });
