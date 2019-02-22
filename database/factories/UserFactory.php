@@ -6,6 +6,7 @@ use App\GiangVien;
 use App\DayMonHoc;
 use App\kythi;
 
+
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -26,6 +27,10 @@ $factory->define(App\hocvien::class, function (Faker $faker) {
     ->format('Y/m/d'),
         'SDT'=>$faker->unique()->phoneNumber,
         'DiaChi'=>$faker->address,
+        'CMND'=>$faker->unique()->number,
+        'NgayCap'=>$faker->dateTimeBetween('2010-01-01', '2018-12-31')
+    ->format('Y/m/d'),
+        'NgheNghiep'=>'Sinh viên',
     ];
 });
 $factory->define(App\giangvien::class, function (Faker $faker) {
