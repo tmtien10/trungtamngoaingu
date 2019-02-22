@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\PhieuDKHoc;
 use App\HocVien;
 use App\LopHoc;
-use App\lopkhoa;
+use App\LopKhoa;
 use App\Nhom;
 use App\HoaDonDKHoc;
 use DB;

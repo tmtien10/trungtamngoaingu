@@ -5,6 +5,7 @@ use App\hocvien;
 use App\GiangVien;
 use App\DayMonHoc;
 use App\kythi;
+use App\MonHoc;
 
 
 /*
@@ -65,6 +66,8 @@ $factory->define(App\PhieuDKHoc::class, function (Faker $faker) {
       'MaHocVien' =>hocvien::all()->unique()->random()->MaHocVien,
       'id' =>  7,
       'TinhTrang' => 1,
+      'ThoiGianDKHoc'=>$faker->dateTimeBetween('2019-01-01', '2019-02-15')
+    ->format('Y/m/d'),
       
     ];
 });

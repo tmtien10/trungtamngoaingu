@@ -45,10 +45,7 @@
 							</h1>
 						</div>
 					<div class="clearfix">
-						<a href="ad/phieudangki/them">	<button class="btn btn-white btn-info btn-bold">
-												<i class="ace-icon fa fa-plus bigger-120 blue"></i>
-											Thêm mới
-											</button></a>
+						
 											<div class="pull-right tableTools-container"></div>
 
 										</div>
