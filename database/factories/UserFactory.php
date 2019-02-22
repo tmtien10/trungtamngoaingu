@@ -38,7 +38,7 @@ $factory->define(App\giangvien::class, function (Faker $faker) {
     ->format('Y/m/d'),
         'SDTGV'=>$faker->unique()->phoneNumber,
         'DiaChiGV'=>$faker->address,
-        'TinhTrang'=>1
+        'TinhTrang'=>1,
     ];
 });
 $factory->define(App\cbtt::class, function (Faker $faker) {
