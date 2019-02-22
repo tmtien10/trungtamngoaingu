@@ -27,7 +27,7 @@ $factory->define(App\hocvien::class, function (Faker $faker) {
     ->format('Y/m/d'),
         'SDT'=>$faker->unique()->phoneNumber,
         'DiaChi'=>$faker->address,
-        'CMND'=>$faker->unique()->number,
+        'CMND'=>$faker->unique()->creditCardNumber ,
         'NgayCap'=>$faker->dateTimeBetween('2010-01-01', '2018-12-31')
     ->format('Y/m/d'),
         'NgheNghiep'=>'Sinh viên',
